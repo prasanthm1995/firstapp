@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="display-4 text-center p-3" >
+    User Dashboard
+    </div>
+    <div class="col text-center">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-success mt-3 text-center me-3" type="button" (click)="showForm = !showForm" >Add User</button>
+            <app-adduser (addUser)="addUser($event)" *ngIf="showForm"></app-adduser>
+        </div>
+       
+    </div>
+
+    <div>
+        <app-user [datafromparent]="data2child" ></app-user>
+        <!-- <app-user [activestatus]="isActive" [title]="title" [laptop]="laptop"></app-user> -->
+    </div>
+<!-- <table class="table table-hover">
+     <thead class="table-dark">
+        <tr>
+         
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+          <th>Contact</th>
+        </tr>
+     </thead>
+     <tbody>
+        <tr *ngFor="let user of users">
+            <td>{{user.name.firstname}}</td>
+            <td>{{user.name.lastname}}</td>
+            <td class="table-info">{{user.email}}</td>
+            <td>{{user.phone}}</td>
+        </tr>
+     </tbody>
+
+</table> -->
+<!-- </div> -->
+<ul  class="list-group" >
+    <li class="list-group-item mb-2 bg-info" *ngFor="let user of users">
+        <div class="row">
+            <div class="col-md-4">
+               <img [src]="user.image" alt="Image not found" width="100" height="100" class="img-fluid">
+            </div>
+            <div class="col-md-8">
+                <h1>Name: {{user.name.firstname}} {{user.name.lastname}}</h1>
+                
+            </div>
+
+        </div>
+
+    </li>
+</ul>

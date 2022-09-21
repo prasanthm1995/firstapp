@@ -1,0 +1,111 @@
+ <!-- <div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <div class="card bg-info">
+            <div class="card-boby">
+                <h2 class="mt-3 mb-3 fw-bold"><i class="bi bi-lock"></i><span class="text-white ms-2">CG-Vak Store</span> Login</h2>
+                <form #loginForm="ngForm" (load)="loginForm.form.reset"   style="margin: 8px;">
+                <div class="form-group">
+                    <div class="form-label">Email</div>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <div class="form-label">Password</div>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="password">
+                </div>
+                <div class="text-center mt-3">
+                <button class="btn btn-light" [disabled]="!loginForm.form.valid" type="submit">Login</button>
+                </div>
+              </form>  
+            </div>
+        </div> 
+
+    </div>
+</div> -->
+<!-- <div class="row mt-4">
+    <div class="col-md-6 mx-auto">
+        <div class="card bg-info">
+            <div class="card-boby">
+                <h2 class="mt-3 mb-3 fw-bold"><i class="bi bi-lock"></i><span class="text-white ms-2">CG-Vak Store</span> Login</h2>
+              <form [formGroup]="loginForm"   style="margin: 8px;">
+                <div class="form-group">
+                    <div class="form-label">Email</div>
+                    <input  formControlName="email" type="email"   class="form-control" id="email" name="email" placeholder="email">
+                </div>
+                <div class="form-group">
+                    <div class="form-label">Password</div>
+                    <input formControlName="password" type="password"   class="form-control" id="password" name="password" placeholder="password">
+                </div>
+                <div class="text-center mt-3">
+                <button class="btn btn-light"   type="submit">Login</button>
+                </div>
+              </form>
+            </div>
+        </div> 
+
+    </div>
+</div> -->
+<!-- <div class="container">
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form #registerForm="ngForm"  (load)="registerForm.form.reset" (ngSubmit)="onSubmit(registerForm)">
+                <h2 class="text-center">Register Form</h2>
+                 <div class="form-group">
+                  <label for="firstname">First Name:</label>
+                  <input [(ngModel)]="user.name.firstname"   type="text" class="form-control" >
+                  <div *ngIf="registerForm.controls['firstName'].touched && !registerForm.controls['firstName'].valid">  
+                    <span *ngIf="registerForm.controls['firstName'].hasError('required') ">  
+                        <i style="color:red">First name is required</i>    
+                        </span>  
+                        <span *ngIf="registerForm.controls['firstName'].hasError('minlength') ">  
+                            <i style="color:red"> Min length is 1</i>   
+                        </span>  
+                        <span *ngIf="registerForm.controls['firstName'].hasError('maxlength') ">  
+                            <i style="color:red">max length is 15</i>   
+                    </span>  
+                </div>  
+                 </div>
+                 <div class="form-group">
+                    <label for="lastname">Last Name:</label>
+                    <input formControlName="lastName" type="text" class="form-control">
+                    <div *ngIf="registerForm.controls['lastName'].touched && !registerForm.controls['lastName'].valid">  
+                        <span *ngIf="registerForm.controls['lastName'].hasError('required') ">  
+                            <i style="color:red">Last name is required</i>  
+                            </span>  
+                            <span *ngIf="registerForm.controls['lastName'].hasError('minlength') ">  
+                                <i style="color:red"> Min length is 1</i>     
+                            </span>  
+                            <span *ngIf="registerForm.controls['lastName'].hasError('maxlength') ">  
+                                <i style="color:red">max length is 15</i>   
+                        </span>  
+                    </div>  
+                
+                   </div>
+                   <div class="form-group">
+                    <label for="emailaddress">Email Address:</label>
+                    <input  formControlName="email" type="text" class="form-control" >
+                    <div *ngIf="registerForm.controls['email'].touched && !registerForm.controls['email'].valid">
+                     <span *ngIf="registerForm.controls['email'].hasError('required')">
+                       <i style="color:red"> Email is needed</i>
+                     </span>
+                     <span *ngIf="registerForm.controls['email'].hasError('email')">
+                        <i style="color:red">Invalid Email ID</i>
+                     </span>
+                    </div>
+                   </div>
+                   <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input  formControlName="password" type="password" class="form-control">
+                   </div> 
+                   <div class="form-group mt-3">
+                   <button class="btn btn-primary" value="Post Data" type="submit" [disabled]="registerForm.valid">
+                      Register
+                   </button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div> -->

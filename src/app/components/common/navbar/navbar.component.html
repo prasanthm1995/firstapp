@@ -1,0 +1,40 @@
+<!-- <div>
+    <nav class="bg-danger p-3">
+        <a href="/" class="button">Home</a>
+        <a href="/customers" class="button">Customer Dashboard</a>
+        <a href="/products" class="button">Product Dashboard</a>
+        <a href="/users" class="button">User Dashboard</a>
+        <a href="/orders" class="button">Order Dashboard</a>
+    </nav>
+</div> -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"  >
+    <a class="navbar-brand mb-0 h1" href="#">CG-Vak</a>
+<div class="collapse navbar-collapse"  >
+    <ul class="navbar-nav mr-auto"  *ngIf="loginStatus">
+      <li class="nav-item">
+        <a class="nav-link active" href="/home">Home </a>
+      </li>
+      <li class="nav-item ">
+          <a href="/products"  class="nav-link active" >Product </a>
+      </li>
+      <li class="nav-item ">
+        <a href="/users" class="nav-link active" >User </a>
+    </li>
+    <li class="nav-item ">
+      <a href="/orders" class="nav-link active" >Order</a>
+  </li>
+    </ul>
+    <ul class="navbar-nav ms-auto" *ngIf="!loginStatus">
+        <li class="nav-item">
+          <a   routerLink="/login" class="nav-link active"   aria-current="page">Login</a>
+        </li>
+        <li class="nav-item ">
+            <a  routerLink="/signup"  class="nav-link active" aria-current="page" >SignUp</a>
+        </li>
+        <li class="nav-item ">
+          <a href="/changepassword" class="nav-link active" aria-current="page">Change Password </a>
+      </li>
+      
+      </ul>
+</div>
+</nav>

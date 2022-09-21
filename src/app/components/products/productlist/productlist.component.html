@@ -1,0 +1,47 @@
+<app-addproduct></app-addproduct>
+<div style="width:80%;margin:auto" class="mt-3">
+    <!-- <div class="col text-center">
+        <div class="d-grid gap-2 d-md-block">
+            <button class="btn btn-success mt-3 text-center me-3" type="button" (click)="showForm = !showForm">Add Product</button>
+             <app-addproduct (addProduct)="addProduct($event)" *ngIf="showForm"></app-addproduct>  
+        </div>
+       
+    </div> -->
+    <!-- <ul >
+         <app-product [singleproduct]="product"  *ngFor="let product of products"></app-product>
+    </ul> -->
+
+    <ul >
+        <li class="card card-body mb-2" [style.border-left]="product.promotion?'5px solid lightcoral':'5px solid lightgreen'"  *ngFor="let product of products" >
+            <div class="row" >
+                
+                <div class="col-md-4">
+                    
+                   <img style="cursor:pointer;" (click)="setShowExtended()" [src]="product.image" alt="Image not found" width="200" height="200" >
+                </div>
+                <div class="col-md-8">
+                  
+                    <h3 (click)="setShowExtended()" [routerLink]="['/product/',product.id]" [queryParams]="{prop:'xxx'}" [ngStyle]="currentStyles" style="cursor:pointer;">{{product.title | uppercase}}</h3>
+                    <div *ngIf="Showextended" >
+                    <p>
+                        {{product.price| currency:"INR"}}
+                    </p>
+                   
+                   <!-- <p>
+                    {{product.promotionDate |date:"dd/MM/yyyy"}}
+                   </p> -->
+                </div>
+             
+                </div>
+    
+            </div>
+          
+        </li>
+    </ul>
+
+    <p class="display-6 text-danger text-center" *ngIf="products.length==0">Sorry! No Records Found</p>
+
+    <!-- <ng-template #noRecords>
+        <p class="text-center">Sorry! No Records Found</p>
+    </ng-template> -->
+    </div>

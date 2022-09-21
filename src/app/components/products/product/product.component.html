@@ -1,0 +1,38 @@
+<div class="container">
+     
+<ul >
+    <li class="card card-body mb-2" [style]="{border:'3px solid red'}">
+        <!-- [style.border-left]="singleproduct.promotion?'5px solid lightcoral':'5px solid lightgreen'" -->
+        <!-- *ngFor="let product of singleproduct" -->
+        <div class="row">
+            <div class="col-md-4">
+               <img style="cursor:pointer;" (click)="setShowExtended()" [src]="productsolo.image" alt="Image not found" width="200" height="200">
+            </div>
+            <div class="col-md-8">
+                <Button class="btn btn-primary" (click)="setShowExtended()" [class]="Showextended?'fa-solid fa-minus':'fa-solid fa-plus'">
+                    <!-- <i class="fa-solid fa-plus"></i>
+                    <i class="fa-solid fa-minus"></i> -->
+                </Button>
+                <h3 [ngStyle]="customClasses" (click)="setShowExtended()" >{{productsolo.title | uppercase}}</h3>
+                <!-- [style]="{'padding-top':singleproduct.price > 10 ? '0':'40 px','color':singleproduct.price>10?'green':'red','cursor':'pointer'}" -->
+                <!-- [ngStyle]="currentStyles" style="cursor:pointer;" -->
+                <div *ngIf="Showextended" >
+                <p>
+                    {{productsolo.price| currency:"INR"}}
+                </p>
+               <p>
+                {{productsolo.promotionDate |date:"dd/MM/yyyy"}}
+               </p>
+               <button class="btn btn-primary me-2" type="button">Add to Cart</button>
+               <button class="btn btn-primary" type="button">Buy</button>
+            </div>
+            </div>
+
+        </div>
+      
+    </li>
+</ul>
+
+  
+
+</div>
